@@ -1,4 +1,4 @@
-package io.khasang.cs;
+package io.khasang.cs.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
