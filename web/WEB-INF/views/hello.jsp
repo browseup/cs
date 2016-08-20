@@ -11,6 +11,10 @@
     <title>$Title$</title>
   </head>
   <body>
-  ${cat}
+  <li>${cat.getId()}</li>
+  <li>${cat.getName()}</li>
+  <li>${cat.getAge()}</li>
+  <li>${cat.getColor()}</li>
+  <li>${cat.getDescription()}</li>
   </body>
 </html>

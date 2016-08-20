@@ -3,23 +3,20 @@ package io.khasang.cs.dao.impl;
 
 import io.khasang.cs.entity.Cat;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
-import org.osgi.service.component.annotations.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by alexey_n on 20.08.2016.
  */
 @Repository
 @Transactional
-public class CatDaoImpl implements CatDao{
+public class CatDaoImpl implements CatDao {
     @Autowired
     SessionFactory sessionFactory;
 

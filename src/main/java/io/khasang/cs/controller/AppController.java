@@ -21,7 +21,17 @@ public class AppController {
     public String hello(Model model) {
 //        model.addAttribute("hello", message.getHello());
 
-        model.addAttribute("cat", catDao.getCatById(1).getName());
+        model.addAttribute("cat", catDao.getCatById(1));
+//        model.addAttribute("catname", catDao.getCatById(1).getName());
+        return "hello";
+    }
+
+    @RequestMapping("/to/to")
+    public String toto(Model model) {
+//        model.addAttribute("hello", message.getHello());
+
+        model.addAttribute("cat", catDao.getCatById(1));
+//        model.addAttribute("catname", catDao.getCatById(1).getName());
         return "hello";
     }
 
