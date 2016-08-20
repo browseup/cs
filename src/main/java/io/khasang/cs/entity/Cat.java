@@ -1,18 +1,19 @@
 package io.khasang.cs.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.*;
 
 /**
  * Created by alexey_n on 20.08.2016.
  */
 @Entity
+@Table(name = "cat")
 public class Cat {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column
     private String name;
     private String color;
     private int age;

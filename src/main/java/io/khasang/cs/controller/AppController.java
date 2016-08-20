@@ -1,8 +1,8 @@
 package io.khasang.cs.controller;
 
 
-import io.khasang.cs.dao.CatDao;
-import io.khasang.cs.dao.impl.CatDaoImpl;
+
+import io.khasang.cs.dao.impl.CatDao;
 import io.khasang.cs.entity.Cat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +20,8 @@ public class AppController {
     @RequestMapping("/")
     public String hello(Model model) {
 //        model.addAttribute("hello", message.getHello());
-        Cat cat = catDao.findById((long) 1);
-        model.addAttribute("cat", cat.getName());
+
+        model.addAttribute("cat", catDao.getCatById(1).getName());
         return "hello";
     }
 

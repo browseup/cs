@@ -18,7 +18,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({"io.khasang.cs.config"})
+@ComponentScan({"io.khasang.cs"})
 @PropertySource(value = {"classpath:hibernate.properties"})
 public class HibernateConfig {
     @Autowired
@@ -52,15 +52,15 @@ public class HibernateConfig {
         return properties;
     }
 
-//    @Bean
-//    public HibernateTransactionManager transactionManager(SessionFactory s) {
-//        HibernateTransactionManager txManager = new HibernateTransactionManager();
-//        txManager.setSessionFactory(s);
-//        return txManager;
-//    }
+    @Bean
+    public HibernateTransactionManager transactionManager(SessionFactory s) {
+        HibernateTransactionManager txManager = new HibernateTransactionManager();
+        txManager.setSessionFactory(s);
+        return txManager;
+    }
 
-//    @Bean
-//    public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
-//        return new PersistenceExceptionTranslationPostProcessor();
-//    }
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
 }

@@ -1,7 +1,7 @@
 package io.khasang.cs.config;
 
 
-import io.khasang.cs.dao.CatDao;
+import io.khasang.cs.dao.impl.CatDao;
 import io.khasang.cs.dao.impl.CatDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
