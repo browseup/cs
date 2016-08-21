@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by alexey_n on 20.08.2016.
  */
@@ -30,6 +32,11 @@ public class CatDaoImpl implements CatDao {
                 createCriteria(Cat.class);
         criteria.add(Restrictions.eq("id", id));
         return (Cat) criteria.uniqueResult();
+    }
+
+    @Override
+    public List<Cat> getCatList() {
+        return null;
     }
 
 }

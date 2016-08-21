@@ -174,9 +174,9 @@
     </dependencies>
 
     <build>
-        <finalName>qb</finalName>
+        <finalName>cs</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>test</testSourceDirectory>
+        <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
