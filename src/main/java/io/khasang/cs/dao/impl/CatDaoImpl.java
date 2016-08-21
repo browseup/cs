@@ -36,7 +36,10 @@ public class CatDaoImpl implements CatDao {
 
     @Override
     public List<Cat> getCatList() {
-        return null;
+        Criteria criteria = sessionFactory.
+                getCurrentSession().
+                createCriteria(Cat.class);
+        return criteria.list();
     }
 
 }

@@ -33,7 +33,8 @@ public class CatServiceTest extends AbstractTransactionalJUnit4SpringContextTest
     @Test
     public void testListCat() {
         Assert.assertNotNull(catDao);
-        Assert.assertEquals(1, catDao.getCatList().size());
+        Assert.assertEquals(3, catDao.getCatList().size());
+        Assert.assertEquals("murka", catDao.getCatList().get(2).getName());
     }
 
 }
