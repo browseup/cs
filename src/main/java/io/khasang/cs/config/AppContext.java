@@ -3,6 +3,8 @@ package io.khasang.cs.config;
 
 import io.khasang.cs.dao.impl.CatDao;
 import io.khasang.cs.dao.impl.CatDaoImpl;
+import io.khasang.cs.dao.impl.FindingCatDao;
+import io.khasang.cs.dao.impl.FindingCatDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,9 @@ public class AppContext {
     public CatDao catDao() {
         return new CatDaoImpl();
     }
+
+    @Bean
+    public FindingCatDao userDao() { return new FindingCatDaoImpl(); }
 
     @Autowired
     Environment environment;
